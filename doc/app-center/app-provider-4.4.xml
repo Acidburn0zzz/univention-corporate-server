@@ -2776,12 +2776,11 @@ Group[de] = Lizenz und Liste
             to be aware of changes to the certificates. Starting with <ulink
                 url="https://errata.software-univention.de/ucs/4.3/91.html">UCS
                 4.3-0 errata 91</ulink> the Univention App Center provides a
-            simple way to manage certificates inside an app. This is simply a
-            new action named <guimenu>update-certificates</guimenu> in the app
-            Center which is called automatically during the installation and
-            upgrade of apps (but can also be executed manually) and provides apps
-            a simple way to gain access to certificates and to react to
-            changes to certificates.
+            simple way to manage certificates inside an app. The script
+            <guimenu>update-certificates</guimenu> is executed on the UCS host
+            automatically during the installation and upgrade of apps (but can
+            also be executed manually) and provides apps a simple way to gain
+            access to certificates and to react to changes to certificates.
         </para>
 <programlisting>
 # update all apps
@@ -2792,7 +2791,7 @@ Group[de] = Lizenz und Liste
 </programlisting>
 
         <para>
-            What happens update-certificates?
+            What happens with update-certificates?
             <itemizedlist>
                 <listitem>
                     <simpara>
