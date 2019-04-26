@@ -58,9 +58,12 @@ class RsyslogEmitter(object):
 
 	def emit(self, entry):
 		if self.handler is None:
-			self.handler = SysLogHandler(address='/dev/log', facility='user')
+			if os.path.exists('/dev/log'):
+				self.handler = SysLogHandler(address='/dev/log', facility='user')
 		record = logging.LogRecord('diary-rsyslogger', logging.INFO, None, None, 'ADMINDIARY: ' + str(entry), (), None, None)
-		self.handler.emit(record)
+		if self.handler:
+			self.handler.emit(record)
+
 
 emitter = RsyslogEmitter()
 
