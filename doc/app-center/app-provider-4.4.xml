@@ -168,7 +168,19 @@
                            Provider Portal</ulink>.
                    </simpara>
                </listitem>
+               <listitem>
+                   <simpara>
+                       After the login, the <guimenu>Apps</guimenu> needs to be opened to work on the app.
+                   </simpara>
+               </listitem>
            </orderedlist>
+           
+           <para>
+             <figure id="create-app-with-docker:portal-overview">
+                 <title>App Provider Portal overview with "Apps" module selected</title>
+                 <graphic scalefit="1" width="100%" fileref="illustrations44/app_portal_overview.png"/>
+             </figure>
+          </para>
         </section>
     </section>
 
